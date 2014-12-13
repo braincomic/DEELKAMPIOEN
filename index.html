@@ -772,7 +772,7 @@ function shuffle(array) {
 // display (only display!) the question with number 'questionNr' to the screen
 function displayNewQuestion() {
 	// Ask   A / B  (no symmetry)
-	$("#testPerformQuestion").text(""+listOfQuestions[questionNr][0]+" / "+listOfQuestions[questionNr][1]+" ");
+	$("#testPerformQuestion").text(""+listOfQuestions[questionNr][0]+" : "+listOfQuestions[questionNr][1]+" ");
 }
 
 
@@ -1302,7 +1302,7 @@ $(document).on("pageshow","#PAGE_TEST_RESULT",function(){
 		if (listOfQuestionsCopy[i][3] > 0) {
 			
 			// tafel
-			currentMultiplication = ''+listOfQuestionsCopy[i][0]+'/'+listOfQuestionsCopy[i][1]+'='+listOfQuestionsCopy[i][2];
+			currentMultiplication = ''+listOfQuestionsCopy[i][0]+':'+listOfQuestionsCopy[i][1]+'='+listOfQuestionsCopy[i][2];
 			
 			// value time last try
 			currentTimeValue = parseInt( 1000*listOfQuestionsCopy[i][10] , 10 ); // unit: ms
@@ -1601,7 +1601,7 @@ $(document).on("pagebeforeshow","#PAGE_STATISTICS",function(){
 		if (tableDataCopy[i][3] > 0) {
 			
 			// tafel
-			currentMultiplication = ''+tableDataCopy[i][0]+'/'+tableDataCopy[i][1]+'='+tableDataCopy[i][2];
+			currentMultiplication = ''+tableDataCopy[i][0]+':'+tableDataCopy[i][1]+'='+tableDataCopy[i][2];
 			
 			// value time 75%
 			currentTimeValue = parseInt( 1000*tableDataCopy[i][7] , 10 ); // unit: ms
@@ -1695,7 +1695,7 @@ $(document).on("pagebeforeshow","#PAGE_STATS_EXTRA",function(){
 			}
 			// tafel
 			r[++k] = '<td>';
-			r[++k] = ''+tableDataCopy[i][0]+'/'+tableDataCopy[i][1]+'='+tableDataCopy[i][2];
+			r[++k] = ''+tableDataCopy[i][0]+'+'+tableDataCopy[i][1]+'='+tableDataCopy[i][2];
 			r[++k] = '</td>';
 			// // perc correct
 			// r[++k] = '<td>';
