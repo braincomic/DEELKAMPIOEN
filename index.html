@@ -24,7 +24,7 @@
 
 TO USE WITH CLICK INSTEAD OF TOUCHSTART,
 FOR EXAMPLE ON A COMPUTER,
-REPLACE "touchstart click" WITH "touchstart"
+REPLACE "click' WITH "touchstart'
 for example, $("#testStartButtonAll").on("touchstart",function(e){
 
 
@@ -632,7 +632,7 @@ function setNextMissionText() {
 			textTables += " en ";
 			textTables += missions[missionNr][0][missions[missionNr][0].length-1];
 		}
-		console.log("missionTableText="+missionTableText);
+		console.log("missionTableText met missionNr "+missionNr+"="+textTables);
 		$("#missionTableText").text(textTables);
 		
 		
@@ -803,7 +803,7 @@ function selectQuestions() {
 	for (i = 0; i<tableData.length; i++) {
 		var d1 = tableData[i][0];
 		var d2 = tableData[i][1];
-		if ($.inArray(d1, selectedTablesForTest) >= 0 || $.inArray(d2, selectedTablesForTest) >= 0 ) {
+		if ($.inArray(d2, selectedTablesForTest) >= 0 ) {
 			possibleQuestions.push(tableData[i]);
 			console.log(""+d1+" div "+d2+" : Selected");
 		}
